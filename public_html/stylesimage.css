@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  background: blank;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.banner-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.banner {
+  width: 350px;
+  flex-shrink: 0;
+  margin-right: 0; /* Geen ruimte tussen banners */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 100px;  /* Pas grootte aan indien nodig */
+  height: auto;
+  z-index: 1000; /* Zorgt dat hij boven andere elementen staat */
+}
+
+

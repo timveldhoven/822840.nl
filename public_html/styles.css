@@ -1,0 +1,291 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
+
+
+h1 {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+ 
+ 
+ 
+ .regel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+
+ 
+
+ 
+#y {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+  .t {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+ 
+ .q {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+ #u {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+ .row {
+  display: flex;
+}
+
+.column {
+  flex: 20%;
+  padding: 0px;
+}
+ 
+ 
+ 
+.latest-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+ #r {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+
+
+ 
+ .center-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+
+
+
+
+/* Navigatieknoppen */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+nav a {
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* Kleuren per link */
+.home { background-color: rgba(255, 200, 0, 1); }
+.overons { background-color:rgba(255, 200, 0, 1); }
+.voetbal { background-color: rgba(255, 200, 0, 1); }
+.basketbal { background-color: rgba(255, 200, 0, 1); }
+.tennis { background-color: rgba(255, 200, 0, 1); }
+.hockey { background-color: rgba(255, 200, 0, 1); }
+.volleybal { background-color: rgba(255, 200, 0, 1); }
+
+
+#home { background-color: rgba(167, 0, 0, 1); }
+#overons { background-color:rgba(167, 0, 0, 1); }
+#voetbal { background-color: rgba(167, 0, 0, 1); }
+#basketbal { background-color: rgba(167, 0, 0, 1); }
+#tennis { background-color: rgba(167, 0, 0, 1); }
+#hockey { background-color: rgba(167, 0, 0, 1); }
+#volleybal { background-color: rgba(167, 0, 0, 1); }
+
+
+  
+body {
+  overflow-x: hidden;
+}
+
+
+
+#qwertyuiop,
+#sport,
+#beschrijving,
+#link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+ 
+
+ 
+nav a:hover {
+	background-color: red;
+	color: white;
+}
+
+
+
+
+
+
+.nieuws-achtergrond {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.nieuws-achtergrond {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nieuws-achtergrond .banner-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+body {
+  background-color: rgba(255, 165, 0, 1); 
+}
+
+
+
+.featured-sport-achtergrond {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 650px;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.featured-sport-achtergrond {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.featured-sport {
+  padding: 20px;
+  text-align: center;
+}
+
+#sport, #beschrijving, #link {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+body {
+  background-color: rgba(255, 165, 0, 1); 
+}
+
+
+
+.featured-port-achtergrond {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.featured-port-achtergrond {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.featured-ort-achtergrond {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 900px;
+  max-height: auto;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.featured-ort-achtergrond {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.speler {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+footer {
+  background-color: black;   /* maakt de balk zwart */
+  color: white;              /* maakt de tekst wit */
+  text-align: center;        /* centreert de tekst */
+  padding: 15px 0;           /* ruimte boven en onder de tekst */
+    bottom: 0;
+  width: 100%;
+}
+
+

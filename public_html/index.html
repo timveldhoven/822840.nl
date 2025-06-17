@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>hoofdpagina</title>
+		
+		<link rel="stylesheet" href="styles.css">
+		
+		<link rel="stylesheet" href="stylesimage.css">
+	</head>
+	
+	<body>
+  <br>
+		<h1>Welkom op mijn website over sport</h1>
+		
+<br>
+		
+		<nav>
+		
+		    <a id="home" href="index.html" >Hoofdpagina</a>
+    
+
+	
+			<a class="voetbal" href="voetbal.html" >Voetbal</a>
+    
+			<a class="basketbal" href="basketbal.html" >Basketbal</a>
+    
+			<a class="tennis" href="tennis.html" >Tennis</a>
+    
+			<a class="hockey" href="hockey.html" >Hockey</a>
+    
+			<a class="volleybal" href="volleybal.html" >Volleybal</a>
+	
+		</nav>
+
+  
+      
+				<p class='center-container'>Op deze website vind je alles over populaire sporten zoals: </p>
+				<p class='center-container'>voetbal, basketbal, tennis en meer </p>
+				<p class='center-container'>Ontdek nieuws, spelregels, geschiedenis en leuke weetjes!</p>
+	
+	
+
+          
+			<div class="nieuws-achtergrond">
+					<h2 class="q">Laatste nieuws</h2>
+					<p class="q">EK Voetbal 2025 begint deze maand!</p>
+
+				<div class="banner-container">
+    
+					<div class="banner-track" id="banner-track">
+      
+						<img src="https://static.ostadium.com/galleries/uefa-womens-euro-switzerland-2025-illus.jpg" class="banner">
+      
+						<img src="https://static.ostadium.com/galleries/uefa-womens-euro-switzerland-2025-illus.jpg" class="banner">
+      
+						<img src="https://static.ostadium.com/galleries/uefa-womens-euro-switzerland-2025-illus.jpg" class="banner">
+      
+						<img src="https://static.ostadium.com/galleries/uefa-womens-euro-switzerland-2025-illus.jpg" class="banner">
+      
+						<img src="https://static.ostadium.com/galleries/uefa-womens-euro-switzerland-2025-illus.jpg" class="banner">
+    
+					</div>
+	
+				</div>
+  
+			</div>
+
+
+
+					<script>
+							const track = document.getElementById("banner-track");
+							track.innerHTML += track.innerHTML; // kopieer banners voor eindeloze scroll
+					</script>
+      
+	<div class="featured-sport-achtergrond">
+        <div class="featured-sport">
+
+            <h2 id='qwertyuiop'>Uitgelichte sport</h2>
+
+
+			<p id="sport" style="font-size: 20px;"></p>
+			
+			<p id="beschrijving"></p>
+			
+			<p id="link"></p>
+
+			
+			<script>
+				const sportInfo = {
+					voetbal: {
+						beschrijving: "De meest populaire sport ter wereld.",
+						linkText: "Lees meer over voetbal.",
+						linkHref: "voetbal.html"
+					},
+					basketbal: {
+						beschrijving: "Een spectaculaire teamsport vol snelheid, actie en precisie.",
+						linkText: "Lees meer over basketbal.",
+						linkHref: "basketbal.html"
+					},
+					hockey: {
+						beschrijving: "Een populaire teamsport met stick en bal, geliefd in Nederland.",
+						linkText: "Lees meer over hockey.",
+						linkHref: "hockey.html"
+					},
+					tennis: {
+						beschrijving: "Een wereldwijde topsport met legendarische toernooien zoals Wimbledon en Roland Garros.",
+						linkText: "Lees meer over tennis.",
+						linkHref: "tennis.html"
+					},
+					volleybal: {
+						beschrijving: "Een sport waar lengte en sprongkracht vaak het verschil maken.",
+						linkText: "Lees meer over volleybal.",
+						linkHref: "volleybal.html"
+					}
+				};
+
+ 
+
+
+				const sporten = Object.keys(sportInfo);
+ 
+				const nu = new Date().getTime();
+  
+				const vorigeTijd = localStorage.getItem("tijd");
+  
+				const vorigeSport = localStorage.getItem("sport");
+  
+  
+  
+  
+				let gekozenSport;
+
+  
+
+  
+				if (vorigeTijd && vorigeSport && (nu - vorigeTijd < 3600000)) {
+					gekozenSport = vorigeSport;
+				} 
+				
+				else {
+					gekozenSport = sporten[Math.floor(Math.random() * sporten.length)];
+					localStorage.setItem("tijd", nu);
+					localStorage.setItem("sport", gekozenSport);
+				}
+
+				const info = sportInfo[gekozenSport];
+
+					document.getElementById("sport").textContent = gekozenSport;
+  
+					document.getElementById("beschrijving").textContent = info.beschrijving;
+  
+  
+  
+  document.getElementById("link").innerHTML = `<a href="${info.linkHref}" target="_blank">${info.linkText}</a>`;
+  
+  
+		</script>
+
+
+
+		<script>
+			window.download = () => {
+				const totalWidth = track.scrollWidth / 2;
+				const snelheid = 50; // pixels per seconde
+				const tijd = totalWidth / snelheid;
+				track.style.animationDuration = `${tijd}s`;
+			};
+		</script>
+
+		</div>
+	</div>
+	
+	
+	<a class=logo>
+		<img src="infologo.png" alt="Logo" class="logo">
+	</a>
+
+  
+	
+	
+	
+	
+	
+	
+	
+	<footer>
+		<p>
+			<strong>Naam:</strong> Tim Veldhoven |
+			<strong>Email:</strong> 822840@student.lmc-vo.nl |
+			<strong>Telefoonnummer:</strong> 06-25237527 |
+			<strong>School:</strong> Lyceum Kralingen |
+			<strong>Locatie:</strong> Witte de Withstraat, Rotterdam
+		</p>
+	</footer>
+
+	
+	</body>
+
+</html>
