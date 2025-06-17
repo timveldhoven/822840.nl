@@ -1,0 +1,21 @@
+name: Deploy Files
+
+on: [push]
+
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: 🚀 Deploy Files
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy to Server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: 'tim'
+          server: '822840.nl'
+          ssh_private_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          local_path: './public_html/*'
+          remote_path: 'web/822840.nl/public_html'
+          sftpArgs: '-o ConnectTimeout=5'
