@@ -112,21 +112,7 @@ nav a {
   color: white;
 }
 
-.12 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
 
-.12 {
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-}
 
 
 /* Kleuren per link */
@@ -138,7 +124,9 @@ nav a {
 .hockey { background-color: rgba(255, 200, 0, 1); }
 .volleybal { background-color: rgba(255, 200, 0, 1); }
 .ckv { background-color: rgba(255, 200, 0, 1); }
-
+.geschiedeniser { background-color: rgba(255, 200, 0, 1); }
+.regeler { background-color: rgba(255, 200, 0, 1); }
+.spelerser { background-color: rgba(255, 200, 0, 1); }
 
 #home { background-color: rgba(167, 0, 0, 1); }
 #overons { background-color:rgba(167, 0, 0, 1); }
