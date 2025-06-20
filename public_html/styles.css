@@ -124,9 +124,9 @@ nav a {
 .hockey { background-color: rgba(255, 200, 0, 1); }
 .volleybal { background-color: rgba(255, 200, 0, 1); }
 .ckv { background-color: rgba(255, 200, 0, 1); }
-.geschiedeniser { background-color: rgba(255, 200, 0, 1); }
-.regeler { background-color: rgba(255, 200, 0, 1); }
-.spelerser { background-color: rgba(255, 200, 0, 1); }
+.geschiedeniser a { background-color: rgba(255, 200, 0, 1); }
+.regeler a { background-color: rgba(255, 200, 0, 1); }
+.spelerser a { background-color: rgba(255, 200, 0, 1); }
 
 
 
