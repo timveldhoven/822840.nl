@@ -96,7 +96,8 @@ h1 {
 
 
 /* Navigatieknoppen */
-nav {
+nav,
+12 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -104,7 +105,8 @@ nav {
   margin-top: 20px;
 }
 
-nav a {
+nav a,
+12 {
   padding: 10px 15px;
   border-radius: 8px;
   text-decoration: none;
