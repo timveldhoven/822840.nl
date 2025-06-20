@@ -286,6 +286,25 @@ body {
   gap: 24px;
 }
 
+.featured-rt-achtergrond {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: auto;
+  max-height: auto;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.featured-rt-achtergrond {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
 
 footer {
   background-color: black;   /* maakt de balk zwart */
