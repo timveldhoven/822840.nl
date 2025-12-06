@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Foto's - Sport Gallerij</title>
+    <title>Fotos - Sport Gallerij</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../stylesimage.css">
 </head>
@@ -14,7 +14,7 @@
     </a>
 
     <br>
-    <h1>Sport Foto's Gallerij</h1>
+    <h1>Sport Fotos Gallerij</h1>
     <br>
 
     <!--directie anderen pagina's-->
@@ -29,7 +29,7 @@
     </nav>
 
     <div class="center-container">
-        <p>Welkom bij de foto gallerij! Hier vind je foto's over verschillende sporten.</p>
+        <p>Welkom bij de foto gallerij! Hier vind je fotos over verschillende sporten.</p>
         
         <?php
         // Display current date
