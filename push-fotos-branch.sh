@@ -1,5 +1,7 @@
 #!/bin/bash
 # Script to push the fotos branch to the remote repository
+set -e  # Exit on error
+set -u  # Exit on undefined variable
 
 echo "Pushing 'fotos' branch to origin..."
 git push origin fotos:fotos
