@@ -37,19 +37,21 @@ if (!is_file($filename)) {
     exit;
 }
 
+// Serve the file efficiently for large files
+$handle = fopen($filename, 'rb');
+if ($handle === false) {
+    header('HTTP/1.0 500 Internal Server Error');
+    header('Content-Type: text/html; charset=UTF-8');
+    echo 'Error: Unable to read file';
+    exit;
+}
+
 // Set the correct MIME type for PNG images
 header('Content-Type: image/png');
 
 // Set content length for better performance
 header('Content-Length: ' . filesize($filename));
 
-// Serve the file efficiently for large files
-$handle = fopen($filename, 'rb');
-if ($handle === false) {
-    header('HTTP/1.0 500 Internal Server Error');
-    echo 'Error: Unable to read file';
-    exit;
-}
 fpassthru($handle);
 fclose($handle);
 exit;
