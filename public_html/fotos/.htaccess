@@ -1,0 +1,9 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# Rewrite URLs like /fotos/1 to /fotos/index.php?foto=1
+# This rule matches any numeric or alphanumeric pattern after /fotos/
+# and rewrites it to index.php with the foto parameter
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ index.php?foto=$1 [L,QSA]
