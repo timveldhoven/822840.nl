@@ -13,6 +13,13 @@ if (empty($foto)) {
     exit;
 }
 
+// Additional security: check for null bytes and validate allowed characters
+if (strpos($foto, "\0") !== false || !preg_match('/^[a-zA-Z0-9_-]+$/', $foto)) {
+    header('HTTP/1.0 400 Bad Request');
+    echo 'Error: Invalid foto parameter';
+    exit;
+}
+
 // Construct the filename with .png extension
 $filename = $foto . '.png';
 
@@ -36,7 +43,14 @@ header('Content-Type: image/png');
 // Set content length for better performance
 header('Content-Length: ' . filesize($filename));
 
-// Serve the file
-readfile($filename);
+// Serve the file efficiently for large files
+$handle = fopen($filename, 'rb');
+if ($handle === false) {
+    header('HTTP/1.0 500 Internal Server Error');
+    echo 'Error: Unable to read file';
+    exit;
+}
+fpassthru($handle);
+fclose($handle);
 exit;
 ?>
