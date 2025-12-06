@@ -52,7 +52,11 @@ header('Content-Type: image/png');
 // Set content length for better performance
 header('Content-Length: ' . filesize($filename));
 
-fpassthru($handle);
-fclose($handle);
+// Output the file and ensure handle is closed
+try {
+    fpassthru($handle);
+} finally {
+    fclose($handle);
+}
 exit;
 ?>
